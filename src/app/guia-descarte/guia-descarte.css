@@ -1,0 +1,37 @@
+.guia-container h2 {
+  color: #1b5e20;
+  margin-top: 0;
+}
+
+.intro {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.grid-guias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.guia-card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 8px;
+  border-top: 4px solid #2e7d32;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.guia-card h3 {
+  margin-top: 0;
+  color: #2e7d32;
+  font-size: 1.05rem;
+}
+
+.guia-card p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}

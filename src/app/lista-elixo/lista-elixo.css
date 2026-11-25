@@ -1,0 +1,115 @@
+.painel-impacto {
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.painel-impacto h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.metrica-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metrica-box .valor {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.metrica-box .rotulo {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.dica-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.formulario-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.formulario-box h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #2e7d32;
+}
+
+.campo {
+  margin-bottom: 12px;
+}
+
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+.btn-adicionar {
+  width: 100%;
+  padding: 11px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-adicionar:hover {
+  background-color: #1b5e20;
+}
+
+.lista-box h2 {
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.vazio {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}

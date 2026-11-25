@@ -1,0 +1,17 @@
+<header class="topo">
+  <div class="container-topo">
+    <h1>E-Lixo Zero</h1>
+    <nav>
+      <a routerLink="/" routerLinkActive="ativo" [routerLinkActiveOptions]="{ exact: true }">
+        Minha Lista
+      </a>
+      <a routerLink="/guia" routerLinkActive="ativo">
+        Guia de Descarte
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="conteudo">
+  <router-outlet></router-outlet>
+</main>

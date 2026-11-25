@@ -1,0 +1,16 @@
+<div class="card" [class.concluido]="item().destinado">
+  <div class="info">
+    <span class="categoria">{{ item().categoria }}</span>
+    <h3>{{ item().nome }}</h3>
+    <p class="peso">Peso estimado: <strong>{{ item().pesoGramas }}g</strong></p>
+  </div>
+
+  <div class="acoes">
+    <button type="button" class="btn-concluir" (click)="clicarConcluir()">
+      {{ item().destinado ? 'Reabrir' : 'Destinar (Concluir)' }}
+    </button>
+    <button type="button" class="btn-remover" (click)="clicarRemover()">
+      Remover
+    </button>
+  </div>
+</div>

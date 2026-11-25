@@ -1,0 +1,79 @@
+<section class="painel-impacto">
+  <h2>Seu Impacto Ambiental (E-Lixo Evitado)</h2>
+  <div class="metricas">
+    <div class="metrica-box">
+      <span class="valor">{{ elixoService.calcularPesoEvitado() }} g</span>
+      <span class="rotulo">Lixo eletrônico destinado corretamente</span>
+    </div>
+    <div class="metrica-box">
+      <span class="valor">{{ elixoService.calcularEcoPontos() }} pts</span>
+      <span class="rotulo">EcoPontos acumulados</span>
+    </div>
+  </div>
+  <p class="dica-meta">
+    @if (elixoService.calcularPesoEvitado() >= 500) {
+      Meta batida! Você já evitou mais de meio quilo de metais pesados no lixo comum.
+    } @else {
+      Meta da semana: destine pelo menos 500g de eletrônicos parados!
+    }
+  </p>
+</section>
+
+<section class="formulario-box">
+  <h2>Cadastrar Item Parado em Casa</h2>
+  <form (ngSubmit)="adicionar()">
+    <div class="campo">
+      <label for="nome">O que você encontrou?</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        [(ngModel)]="novoNome"
+        placeholder="Ex: Carregador quebrado, Fone com fio partido..."
+        required
+      />
+    </div>
+
+    <div class="linha-dupla">
+      <div class="campo">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" name="categoria" [(ngModel)]="novaCategoria">
+          <option value="Cabos e Carregadores">Cabos e Carregadores</option>
+          <option value="Pilhas e Baterias">Pilhas e Baterias</option>
+          <option value="Celulares e Tablets">Celulares e Tablets</option>
+          <option value="Periféricos (Mouse/Teclado)">Periféricos (Mouse/Teclado)</option>
+          <option value="Outros Eletrônicos">Outros Eletrônicos</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="peso">Peso estimado (em gramas)</label>
+        <input
+          type="number"
+          id="peso"
+          name="peso"
+          [(ngModel)]="novoPeso"
+          placeholder="Ex: 150"
+          min="1"
+          required
+        />
+      </div>
+    </div>
+
+    <button type="submit" class="btn-adicionar">Adicionar à Lista</button>
+  </form>
+</section>
+
+<section class="lista-box">
+  <h2>Minha Lista de Desapego Tech ({{ elixoService.listarItens().length }})</h2>
+
+  @for (item of elixoService.listarItens(); track item.id) {
+    <app-item-card
+      [item]="item"
+      (aoAlternarStatus)="alternarStatus($event)"
+      (aoRemover)="remover($event)"
+    />
+  } @empty {
+    <p class="vazio">Nenhum item eletrônico cadastrado ainda. Que tal olhar aquela gaveta de cabos?</p>
+  }
+</section>

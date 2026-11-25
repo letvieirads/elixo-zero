@@ -1,0 +1,51 @@
+:host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  min-height: 100vh;
+  background-color: #f0f4f1;
+}
+
+.topo {
+  background-color: #1b5e20;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.container-topo {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+nav a {
+  color: #c8e6c9;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+nav a:hover, nav a.ativo {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.conteudo {
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 0 15px 40px 15px;
+}
